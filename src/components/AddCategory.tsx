@@ -19,8 +19,10 @@ export const AddCategory = ({ setCategories }: IProps) => {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    setCategories((animes) => [...animes, inputValue]);
-    setInputValue("");
+    if (inputValue.trim().length > 2) {
+      setCategories((animes) => [inputValue, ...animes]);
+      setInputValue("");
+    }
   };
   return (
     <Fragment>

@@ -5,3 +5,27 @@
 body {
   padding: 60px;
 }
+
+.card-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  align-content: center;
+  border: 1px solid grey;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.card p {
+  padding: 5px;
+  text-align: center;
+}
+
+.card img {
+  max-width: 170px;
+}
