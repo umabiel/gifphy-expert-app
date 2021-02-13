@@ -1,14 +1,5 @@
-interface IResponseGifs {
-  id: string;
-  title: string;
-  images: { downsized_medium: { url: string } };
-}
-
-interface IGifs {
-  id: string;
-  title: string;
-  url: string;
-}
+import { IGifs } from "../core/oop/interfaces/IGifs";
+import { IResponseGifs } from "../core/oop/interfaces/IResponseGifs";
 
 export const getGifs = async (category: string): Promise<IGifs[]> => {
   const url = `https://api.giphy.com/v1/gifs/search?q=${encodeURI(

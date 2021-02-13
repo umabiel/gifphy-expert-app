@@ -1,11 +1,6 @@
 import { useEffect, useState } from "react";
+import { IGifs } from "../core/oop/interfaces/IGifs";
 import { getGifs } from "../helpers/getGifs";
-
-interface IGifs {
-  id: string;
-  title: string;
-  url: string;
-}
 
 export const useFetchGifs = (category: string) => {
   const initialState = {
