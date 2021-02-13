@@ -1,8 +1,4 @@
-interface IGifs {
-  id: string;
-  title: string;
-  url: string;
-}
+import { IGifs } from "../core/oop/interfaces/IGifs";
 
 export const GifGridItem = ({ id, title, url }: IGifs) => {
   return (

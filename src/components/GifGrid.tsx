@@ -1,15 +1,10 @@
 import React, { Fragment } from "react";
+import { IGifs } from "../core/oop/interfaces/IGifs";
 import { useFetchGifs } from "../hooks/useFetchGifs";
 import { GifGridItem } from "./GifGridItem";
 
 interface IProps {
   category: string;
-}
-
-interface IGifs {
-  id: string;
-  title: string;
-  url: string;
 }
 
 export const GifGrid = ({ category = "One Punch" }: IProps) => {
