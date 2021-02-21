@@ -2,8 +2,12 @@ import React, { Fragment, useState } from "react";
 import { AddCategory } from "./components/AddCategory";
 import { GifGrid } from "./components/GifGrid";
 
-export const GiftExpertApp = () => {
-  const [categories, setCategories] = useState(["One Punch"]);
+interface IProps {
+  defaultCategories: string[];
+}
+
+export const GiftExpertApp = ({ defaultCategories = [] }: IProps) => {
+  const [categories, setCategories] = useState(defaultCategories);
   // "Samurai X",
   // "Dragon Ball",
 

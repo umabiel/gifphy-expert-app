@@ -7,6 +7,8 @@ import React, {
   useState,
 } from "react";
 
+import PropTypes from "prop-types";
+
 interface IProps {
   setCategories: Dispatch<SetStateAction<string[]>>;
 }
@@ -31,4 +33,8 @@ export const AddCategory = ({ setCategories }: IProps) => {
       </form>
     </Fragment>
   );
+};
+
+AddCategory.propTypes = {
+  setCategories: PropTypes.func.isRequired,
 };

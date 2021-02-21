@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import { IGifs } from "../core/oop/interfaces/IGifs";
 import { useFetchGifs } from "../hooks/useFetchGifs";
 import { GifGridItem } from "./GifGridItem";
+import PropTypes from "prop-types";
 
 interface IProps {
   category: string;
@@ -23,4 +24,8 @@ export const GifGrid = ({ category = "One Punch" }: IProps) => {
       </div>
     </Fragment>
   );
+};
+
+GifGrid.propTypes = {
+  category: PropTypes.string.isRequired,
 };
