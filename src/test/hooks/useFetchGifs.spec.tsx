@@ -19,7 +19,6 @@ describe("Pruebas en el customHook useFetchGifs", () => {
       useFetchGifs(category)
     );
     await waitForNextUpdate();
-
     const { data, loading } = result.current;
 
     expect(data.length).toBe(10);
